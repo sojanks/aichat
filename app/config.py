@@ -1,0 +1,7 @@
+API_KEY = "your_api_key_here"
+MODEL_NAME = "gpt-3.5-turbo"
+MAX_TOKENS = 150
+TEMPERATURE = 0.7
+TOP_P = 1.0
+FREQUENCY_PENALTY = 0.0
+PRESENCE_PENALTY = 0.0
