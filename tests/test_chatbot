@@ -1,0 +1,19 @@
+import unittest
+from app.chatbot import ChatBot
+
+class TestChatBot(unittest.TestCase):
+
+    def setUp(self):
+        self.chatbot = ChatBot()
+
+    def test_respond_to_message(self):
+        response = self.chatbot.respond_to_message("Hello!")
+        self.assertIsInstance(response, str)
+        self.assertNotEqual(response, "")
+
+    def test_respond_to_unknown_message(self):
+        response = self.chatbot.respond_to_message("Unknown input")
+        self.assertIn("I'm sorry", response)
+
+if __name__ == '__main__':
+    unittest.main()
